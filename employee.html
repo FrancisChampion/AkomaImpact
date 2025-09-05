@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akoma Impact Academy</title>
+  <style>
+    :root {
+      --light-blue: #e6f2ff;
+      --light-gold: #f9e5b3;
+      --white: #ffffff;
+      --primary: #005b99;
+      --accent: #c89b3c;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-blue);
+      color: #333;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    section.about {
+      background-color: var(--white);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    section.about h2 {
+      color: var(--primary);
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    section.about p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section.form {
+      background-color: var(--light-gold);
+      padding: 40px 20px;
+    }
+
+    section.form h2 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: var(--white);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 20px;
+      background-color: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #e0c170;
+    }
+
+    .success {
+      color: green;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      section.about h2,
+      section.form h2 {
+        font-size: 1.6em;
+      }
+
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Akoma Impact Academy</h1>
+    <p>Empowering youth through skills, mentorship, and opportunity</p>
+  </header>
+
+  <section class="about">
+    <h2>About Akoma Impact Academy</h2>
+    <p>
+      Akoma Impact Academy is a youth empowerment initiative under Mmabunu Global, designed to equip SHS graduates with practical skills, mentorship, and entrepreneurial tools to thrive in today’s economy. Through hands-on vocational training, leadership development, and community engagement, Akoma bridges the gap between school and meaningful employment—empowering young people to become creators, leaders, and changemakers in Ghana and beyond.
+      <br><br>
+      Whether you're looking to learn a trade, launch a venture, or gain access to mentorship and guidance, Akoma is where your journey begins.
+    </p>
+  </section>
+
+  <section class="form">
+    <h2>Apply Now</h2>
+    <form id="akomaForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" required />
+
+      <label for="gender">Gender</label>
+      <select id="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Prefer not to say</option>
+        <option>Other</option>
+      </select>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required />
+
+      <label for="location">Location (City/Town, Region)</label>
+      <input type="text" id="location" required />
+
+      <label for="school">SHS Attended</label>
+      <input type="text" id="school" required />
+
+      <label for="year">Year of Completion</label>
+      <input type="text" id="year" required />
+
+      <label>Have you participated in any vocational or entrepreneurship programs before?</label>
+      <select id="experience" required>
+        <option value="">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label for="description">If yes, briefly describe your experience</label>
+      <textarea id="description" rows="3"></textarea>
+
+      <label for="skills">Which skill area are you most interested in?</label>
+      <select id="skills" required>
+        <option value="">Select</option>
+        <option>Coding</option>
+        <option>Electronics</option>
+        <option>Digital Marketing</option>
+        <option>Entrepreneurship</option>
+        <option>Career Readiness</option>
+        <option>Other</option>
+      </select>
+
+      <label for="motivation">Why do you want to join Akoma Impact Academy?</label>
+      <textarea id="motivation" rows="3" required></textarea>
+
+      <label for="goals">What do you hope to achieve after completing the program?</label>
+      <textarea id="goals" rows="3" required></textarea>
+
+      <label for="referral">How did you hear about Akoma Impact Academy?</label>
+      <select id="referral" required>
+        <option value="">Select</option>
+        <option>Social Media</option>
+        <option>School</option>
+        <option>Friend</option>
+        <option>Community Event</option>
+        <option>Other</option>
+      </select>
+
+      <label for="cv">Upload CV or supporting document (optional)</label>
+      <input type="file" id="cv" accept=".pdf,.doc,.docx" />
+
+      <button type="submit">Submit Application</button>
+      <div class="success" id="successMessage"></div>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById("akomaForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("successMessage").textContent = "Thank you! Your application has been submitted.";
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
